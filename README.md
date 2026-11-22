@@ -9,10 +9,10 @@ The project is a development **alpha**. The current development version is `0.0.
 | Platform | Where | Version and notes |
 | --- | --- | --- |
 | iPhone and iPad (iOS/iPadOS 17+) | [Public TestFlight beta](https://testflight.apple.com/join/hY8y48e2) | Install Apple's TestFlight app, then open the link. 0.0.4 (build 5) was uploaded on November 22, 2026 and is waiting for Apple's beta review; until it is approved, TestFlight delivers 0.0.3 (build 4). |
-| Android 11+ | [Download APK](https://tools.ch-j.cz/download.php?id=209f65cc34714bad1c21d490&edition=mobile&lang=cs) | 0.0.3, signed alpha package for direct installation |
-| Android distribution tools | [Download AAB](https://tools.ch-j.cz/download.php?id=6913b57771831364e1b93c5c&edition=mobile&lang=cs) | 0.0.3; cannot be installed directly on a phone |
+| Android 11+ | [Download APK](https://tools.ch-j.cz/download.php?id=bf81dd29ae06030cfba1e610&edition=mobile&lang=cs) | 0.0.4, signed alpha package for direct installation; updates 0.0.3 in place (same signing certificate) |
+| Android distribution tools | [Download AAB](https://tools.ch-j.cz/download.php?id=39d5a5368f91c96daa090946&edition=mobile&lang=cs) | 0.0.4; cannot be installed directly on a phone |
 
-Since November 7, 2026, iPhone and iPad builds are distributed only through TestFlight; the website no longer offers IPA or simulator packages. Android 0.0.4 has not been published yet. See the [official mobile download page](https://tools.ch-j.cz/cs/?edition=mobile) for build IDs, SHA-512 values and Android signing-certificate details.
+Since November 7, 2026, iPhone and iPad builds are distributed only through TestFlight; the website no longer offers IPA or simulator packages. Android builds are offered on the website until the app is available on Google Play. See the [official mobile download page](https://tools.ch-j.cz/cs/?edition=mobile) for build IDs, SHA-512 values and Android signing-certificate details.
 
 ## Platforms and features
 
@@ -36,7 +36,7 @@ Implemented in the current application (0.0.4):
 
 There is one active SSH connection. Post-quantum SSH (ML-KEM key exchange, `ssh-mldsa44-ed25519`) is not available in the mobile SSH library: such keys can be generated and exported but not used to log in. Privileged (sudo) reading of unreadable files and editor recovery are not implemented, and the System Monitor only reads; it does not manage swap or page files. SFTP uses POSIX paths, refuses symlink traversal and existing destination files, and deletes directories non-recursively. There is no CSV import, desktop plugin system, local Hash & Checksum tool, automatic updater or background monitoring. Changed trusted host keys block connection; there is currently no UI for rotating or removing them.
 
-Version 0.0.4 was checked on November 22, 2026 with static analysis, 239 automated tests and real OpenSSH integration tests on macOS, and installed and launched on a physical iPhone and iPad. Languages other than Czech, German and English were machine translated and have not had a native review. Android 0.0.4 has not been tested on a physical device. The [recorded test results](https://tools.ch-j.cz/cs/source/?edition=mobile&path=docs%2FTESTING.md) in the published 0.0.3 sources describe earlier validation.
+Version 0.0.4 was checked on November 22, 2026 with static analysis, 239 automated tests and real OpenSSH integration tests on macOS, and installed and launched on a physical iPhone and iPad. Languages other than Czech, German and English were machine translated and have not had a native review. Android 0.0.4 has not been tested on a physical device. The [recorded test results](https://tools.ch-j.cz/cs/source/?edition=mobile&path=docs%2FTESTING.md) in the published sources describe earlier validation.
 
 ## Official links and source code
 
@@ -45,7 +45,7 @@ Version 0.0.4 was checked on November 22, 2026 with static analysis, 239 automat
 - [CH-J Tools Mobile — source code browser and source archives](https://tools.ch-j.cz/cs/source/?edition=mobile)
 - [CH-J Tools Mobile — GitHub](https://github.com/ch-j-code/SM-Mobile)
 
-This GitHub repository contains only this README. Application source code, source archives, documentation, and Android builds are published on the official website (the published source snapshot is currently 0.0.3); iPhone and iPad builds are distributed through TestFlight. To follow the development and build instructions below, download and extract the mobile source archive from the source browser, then open the extracted project directory.
+This GitHub repository contains only this README. Application source code, source archives, documentation, and Android builds are published on the official website (the published source snapshot is 0.0.4); iPhone and iPad builds are distributed through TestFlight. To follow the development and build instructions below, download and extract the mobile source archive from the source browser, then open the extracted project directory.
 
 ## CH-J Ecosystem — Desktop & Mobile
 
